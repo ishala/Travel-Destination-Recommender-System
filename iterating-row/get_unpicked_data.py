@@ -2,8 +2,8 @@ import keyboard
 import pandas as pd
 
 # Membaca data dari file CSV
-dataByPlace = pd.read_excel('data/scrapetable_wisata.xlsx')
-dfNew = pd.read_csv('data/filtered_byPlaceData.csv')
+dataByPlace = pd.read_excel('../data/scrapetable_wisata.xlsx')
+dfNew = pd.read_csv('../data/filtered_byPlaceData.csv')
 
 # Filter data yang tidak ada di dfByPlace berdasarkan kolom 'name'
 unpickedData = dataByPlace[~dataByPlace['name'].str.lower().isin(dfNew['name'].str.lower())]
